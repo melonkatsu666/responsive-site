@@ -1,0 +1,200 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #D4EBEC;
+$subColor: #E8DBCD;
+$keyColor: #F5AF7D;
+$fontColor: #005EA7;
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+// desktop
+@media (min-width: 7695px) {
+
+  /* Base
+  ------------------------------------------------------------*/
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Header
+------------------------------------------------------------*/
+.box {
+  background-image: url("./images/blue.png");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+// desktop
+@media (min-width: 769px) {
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .box {
+    height: 500px;
+  }
+}
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section {
+  padding: 60px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  h1 {
+    font-size: 5.4rem;
+    font-family: "ＭＳ 明朝", serif;
+    color: #419ACF;
+    @extend .uppercase;
+    span {
+      display: inline;
+      font-size: 8.2rem;
+      font-family: "ＭＳ 明朝", serif;
+      color: #E8473E;
+    }
+  }
+  h2 {
+    @extend .abel;
+    font-size: 3.2rem;
+    text-shadow: #419ACF 1px 1px 0;
+    @extend .uppercase;
+  }
+}
+// Content
+#text {
+  background-color: $subColor;
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);  // スキルボックスを縦に並べる
+  }
+  .content {
+    @include flex(1);
+    margin: 10px 0;                  // 上下にマージン
+    padding: 0 0 20px;
+    background-color: #FFF;
+    @include box-sizing(border-box);
+  }
+  h3 {
+    @extend .abel;
+    @extend .uppercase;
+    color: $keyColor;
+    background-color: $fontColor;
+    margin-bottom:20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+}
+
+#text_button {
+  background-color: #FFF;
+  h3 {
+    @extend .abel;
+    @extend .uppercase;
+    font-size: 2.4rem;
+  }
+          .button-readmore {
+          margin: auto;
+          text-align: center;
+          padding: 5px 8px;
+          width: 180px;
+          display: block;
+          color: #FFF;
+          font-weight: bold;
+          background-color: $keyColor;
+          @extend .abel;
+          @extend .uppercase;
+          @include border-radius(7px);
+          font-size: 2rem;
+        }
+}
+
+// desktop
+@media (min-width: 769px) {
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+#text {
+    .container {
+      @include flex-direction(row);     // ボックスを横に並べる
+      justify-content: space-between;
+    }
+    .content {
+      margin: 0 10px;                   // 左右にマージン
+    }
+  }
+#text_button {
+            .button-readmore {
+              &:hover {
+              background-color: darken($keyColor, 10%);
+            }
+          }
+        }
+      }
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: $subColor;
+  padding: 10px 0;
+  text-align: center;
+  color: $fontColor;
+}

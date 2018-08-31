@@ -1,0 +1,150 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #005EA7;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #D4EBEC; }
+
+a {
+  color: #F5AF7D;
+  text-decoration: none; }
+  a:visited {
+    color: #f1924e; }
+  a:hover {
+    color: #f1924e; }
+  a:active {
+    color: #f7be95; }
+  a:hover {
+    text-decoration: underline; }
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout
+------------------------------------------------------------*/
+.block-center, section .container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Font
+------------------------------------------------------------*/
+.abel, section h2, #text h3, #text_button h3, #text_button .button-readmore {
+  font-family: 'Abel', sans-serif; }
+
+.uppercase, section h1, section h2, #text h3, #text_button h3, #text_button .button-readmore {
+  text-transform: uppercase; }
+
+@media (min-width: 7695px) {
+  /* Base
+  ------------------------------------------------------------*/
+  a:hover {
+    text-decoration: underline; } }
+/* Header
+------------------------------------------------------------*/
+.box {
+  background-image: url("./images/blue.png");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+@media (min-width: 769px) {
+  a:hover {
+    text-decoration: underline; }
+
+  .box {
+    height: 500px; } }
+/* Contents
+------------------------------------------------------------*/
+section {
+  padding: 60px 0; }
+  section .container {
+    width: 90%; }
+  section h1 {
+    font-size: 5.4rem;
+    font-family: "ＭＳ 明朝", serif;
+    color: #419ACF; }
+    section h1 span {
+      display: inline;
+      font-size: 8.2rem;
+      font-family: "ＭＳ 明朝", serif;
+      color: #E8473E; }
+  section h2 {
+    font-size: 3.2rem;
+    text-shadow: #419ACF 1px 1px 0; }
+
+#text {
+  background-color: #E8DBCD; }
+  #text .container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  #text .content {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 10px 0;
+    padding: 0 0 20px;
+    background-color: #FFF;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  #text h3 {
+    color: #F5AF7D;
+    background-color: #005EA7;
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold; }
+
+#text_button {
+  background-color: #FFF; }
+  #text_button h3 {
+    font-size: 2.4rem; }
+  #text_button .button-readmore {
+    margin: auto;
+    text-align: center;
+    padding: 5px 8px;
+    width: 180px;
+    display: block;
+    color: #FFF;
+    font-weight: bold;
+    background-color: #F5AF7D;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    font-size: 2rem; }
+
+@media (min-width: 769px) {
+  a:hover {
+    text-decoration: underline; }
+
+  #text .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #text .content {
+    margin: 0 10px; }
+
+  #text_button .button-readmore:hover {
+    background-color: #f1924e; } }
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: #E8DBCD;
+  padding: 10px 0;
+  text-align: center;
+  color: #005EA7; }
+
+/*# sourceMappingURL=style.css.map */
