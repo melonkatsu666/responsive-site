@@ -45,7 +45,7 @@ a {
 .uppercase, section h1, section h2, #text h3, #text_button h3, #text_button .button-readmore {
   text-transform: uppercase; }
 
-@media (min-width: 7695px) {
+@media (min-width: 769px) {
   /* Base
   ------------------------------------------------------------*/
   a:hover {
